@@ -1,17 +1,14 @@
 import {View, StyleSheet, Text, Image, Dimensions} from 'react-native'
-//import {color} from 'react-native-reanimated'
 import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes'
-//api-key
-//bd43e989951445ecbede1b216897ff1c
 const {width, height} = Dimensions.get('window')
 
-const NewsCard = ({}) => {
+const NewsCard = ({item}) => {
     return(
         <View style={styles.cardView}>
-            <Text style={styles.title}>Police reports suggest a larger pattern of AirTag stalking</Text>
-            <Text style={styles.author}>Kris Holt</Text>
-            <Image style={styles.image}/>
-            <Text style={styles.description}>It’s been clear for a while that bad actors are planting location trackers\r\n on other people without their knowledge to track their locations. Trackers have been used in car thefts\r\</Text>
+            <Text style={styles.title}>{item.title}</Text>
+            <Text style={styles.author}>{item.author}</Text>
+            <Image style={styles.image} source = {{uri: item.urlToImage}}/>
+            <Text style={styles.description}>{item.description}</Text>
         </View>
     )
 }
@@ -41,10 +38,9 @@ const styles = StyleSheet.create({
         fontSize: 15
     },
     image:{
-        width: width,
-        height: height / 8,
-        marginLeft: width * 0.05,
-        marginLeft: width * 0.05,
+        height: height / 5,
+        marginLeft: width * 0.04,
+        marginRight: width * 0.05,
         marginVertical: height * 0.02
     },
     author:{
