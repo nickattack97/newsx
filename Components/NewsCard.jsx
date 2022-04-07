@@ -19,39 +19,37 @@ const NewsCard = ({}) => {
 const styles = StyleSheet.create({
     cardView: {
         backgroundColor: 'white',
-        margin: 10,
-        borderRadius: width * 0.05,
+        margin: width * 0.03,
+        borderRadius: width * 0.03,
         shadowColor: '#000',
-        shadowOffset: { width:0, height: 1 },
-        shadowOpacity: 0.8,
-        shadowRadius: 1
+        shadowOffset: { width:0.5, height: 0.5 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3
 
     },
     title: {
-        width: width,
-        marginHorizontal: width * 0.03,
-        marginVertical: width * 0.03,
+        marginHorizontal: width * 0.04,
+        marginVertical: width * 0.05,
         color: 'black',
-        fontSize: 20,
+        fontSize: 19,
         fontWeight: 'bold'
     },
     description: {
-        width: width,
         marginVertical: width * 0.03,
-        marginHorizontal: width * 0.03,
+        marginHorizontal: width * 0.04,
         color: 'grey',
-        fontSize: 18
+        fontSize: 15
     },
     image:{
         width: width,
-        height: height / 6,
+        height: height / 8,
         marginLeft: width * 0.05,
         marginLeft: width * 0.05,
         marginVertical: height * 0.02
     },
     author:{
         marginBottom: width * 0.03,
-        marginHorizontal: width * 0.03,
+        marginHorizontal: width * 0.04,
         color: 'gray',
         fontSize: 15
     }
